@@ -1,0 +1,11 @@
+requests
+feedparser
+pandas
+numpy
+vaderSentiment
+scikit-learn
+schedule
+colorama
+py-clob-client
+python-dateutil
+scipy
