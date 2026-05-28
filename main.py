@@ -223,7 +223,8 @@ def iniciar_agendamento():
         time.sleep(60)
 
 # ============================================
-# INICIAR BOT
+# INICIAR BOT — MODO GITHUB ACTIONS
+# Roda um ciclo e encerra
 # ============================================
 if __name__ == "__main__":
     print("="*50)
@@ -233,11 +234,10 @@ if __name__ == "__main__":
     print(f"Risco por trade: {RISCO_POR_TRADE:.1%}")
     print(f"Stop loss:       {STOP_LOSS_GLOBAL:.1%}")
     print(f"Score mínimo:    {SCORE_MINIMO}/100")
-    print(f"Modo:            SIMULAÇÃO (sem dinheiro real)")
+    print(f"Modo:            SIMULAÇÃO")
     print("="*50)
     
-    try:
-        iniciar_agendamento()
-    except KeyboardInterrupt:
-        print("\n\n⛔ Bot encerrado pelo usuário")
-        relatorio_rapido()
+    # Roda apenas um ciclo e encerra
+    ciclo_principal()
+    relatorio_rapido()
+    print("\n✅ Ciclo concluído — bot encerrado")
